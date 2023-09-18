@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">送出任務</button>
+</form>
+
+{% if success %}
+  <p>任務已派送！</p>
+{% endif %}
